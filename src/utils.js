@@ -10,14 +10,14 @@ var keyExists = function(objectToTest, key) {
 	return exists;
 };
 
-var getPersistencyId = function(yasqe, persistentIdCreator) {
+var getPersistencyId = function(wdqsqe, persistentIdCreator) {
 	var persistencyId = null;
 
 	if (persistentIdCreator) {
 		if (typeof persistentIdCreator == "string") {
 			persistencyId = persistentIdCreator;
 		} else {
-			persistencyId = persistentIdCreator(yasqe);
+			persistencyId = persistentIdCreator(wdqsqe);
 		}
 	}
 	return persistencyId;
@@ -49,9 +49,9 @@ var elementsOverlap = (function() {
 	};
 })();
 
-var getString = function(yasqe, item) {
+var getString = function(wdqsqe, item) {
 	if (typeof item == "function") {
-		return item(yasqe);
+		return item(wdqsqe);
 	} else {
 		return item;
 	}
