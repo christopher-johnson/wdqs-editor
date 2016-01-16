@@ -4,18 +4,18 @@ var quote = function(string) {
   return "'" + string + "'";
 };
 module.exports = {
-  createCurlString : function(yasqe, config) {
-    var ajaxConfig = sparql.getAjaxConfig(yasqe, config);
+  createCurlString : function(wdqsqe, config) {
+    var ajaxConfig = sparql.getAjaxConfig(wdqsqe, config);
     
-    var url = yasqe.options.sparql.endpoint;
-    if (yasqe.options.sparql.requestMethod == 'GET') {
+    var url = wdqsqe.options.sparql.endpoint;
+    if (wdqsqe.options.sparql.requestMethod == 'GET') {
       url += '?' + $.param(ajaxConfig.data);
     }
     var cmds = [
       'curl', url,
-      '-X', yasqe.options.sparql.requestMethod
+      '-X', wdqsqe.options.sparql.requestMethod
     ];
-    if (yasqe.options.sparql.requestMethod == 'POST') {
+    if (wdqsqe.options.sparql.requestMethod == 'POST') {
       cmds.push('--data ' + quote($.param(ajaxConfig.data)));
     }
     for (var header in ajaxConfig.headers) {

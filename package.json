@@ -64,18 +64,8 @@
     "url": "https://github.com/christopher-johnson/wdqs-editor.git"
   },
   "dependencies": {
-    "bootstrap": "latest",
-    "bootstrap-sass": "^3.3.1",
-    "bootstrap-tagsinput": "latest",
-    "jquery-popover": "latest",
     "codemirror": "^4.7.0",
     "jquery": "~ 1.11.0",
-    "jquery-ui": "^1.10.5",
-    "jqcloud":"git://github.com/mistic100/jQCloud.git",
-    "microplugin": "0.0.3",
-    "minimist": "^1.1.0",
-    "selectize": "git://github.com/brianreavis/selectize.js",
-    "underscore": "^1.7.0",
     "wdqs-storage": "latest"
   },
   "browser": {
