@@ -6,7 +6,7 @@
  */
 var $ = require('jquery'),
 	WDQSQE = require('./index.js');
-WDQSQE.defaults = $.extend(true, {}, WDQSQE.defaults, {
+	WDQSQE.defaults = $.extend(true, {}, WDQSQE.defaults, {
 	mode: "sparql11",
 	/**
 	 * Query string
@@ -19,9 +19,9 @@ WDQSQE.defaults = $.extend(true, {}, WDQSQE.defaults, {
 	lineNumbers: true,
 	lineWrapping: true,
 	backdrop: false,
-	//foldGutter: {
-	//	rangeFinder: new WDQSQE.fold.combine(WDQSQE.fold.brace, WDQSQE.fold.prefix)
-	//},
+	foldGutter: {
+		rangeFinder: new WDQSQE.fold.combine(WDQSQE.fold.brace, WDQSQE.fold.prefix)
+	},
 	collapsePrefixesOnLoad: false,
 	gutters: ["gutterErrorBar", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
 	matchBrackets: true,
@@ -122,7 +122,7 @@ WDQSQE.defaults = $.extend(true, {}, WDQSQE.defaults, {
 		 * @property sparql.requestMethod
 		 * @type String|function
 		 */
-		requestMethod: "POST",
+		requestMethod: "GET",
 
 		/**
 		 * @type String|function

@@ -11,6 +11,7 @@ var $ = require("jquery"),
     imgs = require('./imgs.js');
 
 require("../lib/deparam.js");
+require('./prefixFold.js');
 require('codemirror/addon/fold/foldcode.js');
 require('codemirror/addon/fold/foldgutter.js');
 require('codemirror/addon/fold/xml-fold.js');
@@ -325,7 +326,7 @@ var checkSyntax = function(wdqsqe, deepcheck) {
                 return;
             }
 
-            var warningEl = Svg.svg.getElement(imgs.warning);
+            var warningEl = Svg.getElement(imgs.warning);
             if (state.possibleCurrent && state.possibleCurrent.length > 0) {
                 //				warningEl.style.zIndex = "99999999";
                 require('./tooltip')(wdqsqe, warningEl, function() {
